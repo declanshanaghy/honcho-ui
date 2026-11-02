@@ -1,4 +1,4 @@
-# hermes-honcho-ui
+# honcho-ui
 
 A web UI for exploring [Honcho](https://github.com/plasticlabs/honcho) memory — sessions, metadata, documents, and dialectic insights.
 
