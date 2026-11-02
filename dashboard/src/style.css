@@ -1,0 +1,257 @@
+/*
+ * Hermes Honcho — dashboard plugin styles.
+ *
+ * All colors reference theme CSS vars so the tab reskins with the active
+ * dashboard theme. No hardcoded palette.
+ */
+
+.honcho-ui {
+  width: 100%;
+}
+
+.honcho-ui code,
+.honcho-ui pre {
+  background: transparent !important;
+  color: inherit;
+}
+
+/* ---- Layout ---------------------------------------------------------- */
+
+.honcho-ui-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.honcho-ui-header-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.honcho-ui-h1 { font-size: 1.4rem; font-weight: 700; margin: 0; }
+.honcho-ui-h2 { font-size: 1.1rem; font-weight: 600; margin: 0; }
+
+.honcho-ui-body {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.honcho-ui-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.honcho-ui-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.honcho-ui-sidebar-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-foreground, #888);
+  padding: 0.25rem 0;
+}
+
+.honcho-ui-sidebar-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.35rem 0.6rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.honcho-ui-sidebar-item:hover {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.honcho-ui-sidebar-item--active {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  font-weight: 600;
+}
+
+.honcho-ui-content,
+.honcho-ui-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.honcho-ui-main-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Shared bits ------------------------------------------------------ */
+
+.honcho-ui-muted { color: var(--color-muted-foreground, #888); font-size: 0.8rem; }
+.honcho-ui-mt { margin-top: 0.5rem; }
+.honcho-ui-mb { margin-bottom: 0.75rem; }
+
+.honcho-ui-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.honcho-ui-row > :first-child { flex: 1; min-width: 180px; }
+
+.honcho-ui-error {
+  color: #f87171;
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.honcho-ui-prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.honcho-ui-card { margin: 0; }
+
+/* ---- Message timeline ------------------------------------------------- */
+
+.honcho-ui-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.honcho-ui-msg {
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.honcho-ui-msg-meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.honcho-ui-msg-peer { font-weight: 600; font-size: 0.8rem; }
+.honcho-ui-msg-time { font-size: 0.7rem; color: var(--color-muted-foreground, #888); }
+
+.honcho-ui-loadmore {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+/* ---- Dialectic / search replies ---------------------------------------- */
+
+.honcho-ui-reply {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  font-size: 0.85rem;
+}
+
+.honcho-ui-searchhit {
+  border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  padding: 0.5rem 0;
+}
+
+.honcho-ui-conclusion {
+  border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  padding: 0.5rem 0;
+}
+
+/* ---- Queue chip --------------------------------------------------------- */
+
+.honcho-ui-queue {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.honcho-ui-queue-chip { font-variant-numeric: tabular-nums; }
+
+/* ---- JSON inspector ------------------------------------------------------ */
+
+.honcho-ui-inspector { margin-top: 0.35rem; }
+
+.honcho-ui-inspector-toggle { font-size: 0.7rem; }
+
+.honcho-ui-inspector-body { position: relative; margin-top: 0.35rem; }
+
+.honcho-ui-inspector-body .honcho-ui-copy {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  font-size: 0.65rem;
+  z-index: 1;
+}
+
+.honcho-ui-pre {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.72rem;
+  max-height: 420px;
+  overflow: auto;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 0.5rem;
+  white-space: pre;
+}
+
+/* ---- Empty state --------------------------------------------------------- */
+
+.honcho-ui-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-muted-foreground, #888);
+}
+
+.honcho-ui-empty-icon { font-size: 1.6rem; }
+.honcho-ui-empty-title { font-size: 0.9rem; font-weight: 600; }
+.honcho-ui-empty-hint { font-size: 0.75rem; max-width: 460px; }
+
+/* ---- Responsive: collapse the sidebar on narrow screens ----------------- */
+
+@media (max-width: 720px) {
+  .honcho-ui-body { flex-direction: column; }
+  .honcho-ui-sidebar {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .honcho-ui-sidebar-section { flex: 1 1 160px; }
+}

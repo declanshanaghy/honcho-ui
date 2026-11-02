@@ -1,0 +1,14 @@
+{
+  "name": "honcho-ui",
+  "label": "Honcho",
+  "description": "Browse a self-hosted Honcho memory server — workspaces, peers, sessions, message timelines, peer cards, dialectic chat, conclusions, semantic search, deriver queue status and dream trigger",
+  "icon": "Database",
+  "version": "1.0.0",
+  "tab": {
+    "path": "/honcho",
+    "position": "after:sessions"
+  },
+  "entry": "src/index.js",
+  "css": "src/style.css",
+  "api": "plugin_api.py"
+}
